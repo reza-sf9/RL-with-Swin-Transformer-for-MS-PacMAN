@@ -23,11 +23,8 @@ python train.py --env MsPacman-v5 --model swin_dqn --episodes 100000
 python evaluate.py --model swin_dqn --episodes 100
 ```
 
-### Model Architecture
-![Swin Transformer Architecture](path/to/swin_architecture.png) <!-- Placeholder for Swin Transformer diagram -->
-
 ### Results
-![Training Curve](path/to/training_curve.png) <!-- Placeholder for training curve image -->
+![Training Curve](imgs/results.jpg) <!-- Placeholder for training curve image -->
 
 | Model               | Avg Score | Max Score |
 |--------------------|------------|------------|
@@ -36,12 +33,35 @@ python evaluate.py --model swin_dqn --episodes 100
 | Split Q-Learning  | 3,052.7    | 5,000      |
 | **Swin DQN**      | **4,285**  | **7,640**  |
 
+### Swin Transformer Hyperparameters
+| Hyperparameter       | Value         | Description |
+|----------------------|--------------|-------------|
+| Learning Rate       | 6.25×        | Step size for updates |
+| Discount Factor     | 0.99         | Discount factor for future rewards |
+| Batch Size         | 32           | Number of experiences sampled from replay buffer per update |
+| Replay Buffer Size | 1,000,000    | Maximum number of experiences stored in replay buffer |
+| Target Network Update | 10,000    | Frequency of updating target network with Q-network parameters |
+| Epsilon Start      | 1.0          | Initial epsilon value for epsilon-greedy policy |
+| Epsilon End        | 0.01         | Minimum epsilon value after decay |
+| Frame Stack Size   | 4            | Number of frames stacked to create a single observation |
+| Input Frame Size   | 84x84 pixels | Resized input frame dimensions |
+| Optimizer         | Adam         | Optimization algorithm used for training |
+| Loss Function      | Huber Loss   | Loss function to minimize (also called Smooth L1 Loss) |
+| Total Steps       | 16,000,000   | Number of training steps |
+| Total Episodes    | 15,000       | Number of training episodes |
+| Moving Average Window | 30       | Window size for calculating moving average of rewards (for monitoring) |
+
 ### Future Work
 - Extend training beyond 10,000 episodes.
 - Optimize Swin Transformer inference speed.
 - Fine-tune reward shaping for improved strategy.
 
-
+### Contributors
+- Maya Flores
+- José Manuel Pérez Jiménez
+- Joe Molder
+- Reza Saadati Fard
+- Zhiwei Yang
 
 ### References
 1. Mnih et al., "Human-level control through deep reinforcement learning," *Nature*, 2015.
