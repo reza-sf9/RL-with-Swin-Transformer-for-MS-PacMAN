@@ -51,17 +51,7 @@ python evaluate.py --model swin_dqn --episodes 100
 | Total Episodes    | 15,000       | Number of training episodes |
 | Moving Average Window | 30       | Window size for calculating moving average of rewards (for monitoring) |
 
-### Future Work
-- Extend training beyond 10,000 episodes.
-- Optimize Swin Transformer inference speed.
-- Fine-tune reward shaping for improved strategy.
 
-### Contributors
-- Maya Flores
-- José Manuel Pérez Jiménez
-- Joe Molder
-- Reza Saadati Fard
-- Zhiwei Yang
 
 ### References
 1. Mnih et al., "Human-level control through deep reinforcement learning," *Nature*, 2015.
