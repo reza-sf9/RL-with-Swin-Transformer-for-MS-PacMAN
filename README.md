@@ -1,4 +1,4 @@
-```md
+
 ### RL Swin Transformer for Ms. Pac-Man
 
 This repository implements **Reinforcement Learning (RL) with Swin Transformer** in the **Ms. Pac-Man** environment. It compares Deep RL techniques such as **DQN, Double DQN, Dueling DQN, Split Q-Learning, and A2C/A3C**, with a focus on **Double DQN with Swin Transformers**.
